@@ -1,22 +1,29 @@
 <div class="content" role="main">
 
   <div class="card highlight-card card-small">
-    {{ title }} app is running!
+    {{ title }} Ultimate Cookies Aggregator
 
   </div>
   <h2>Acciones básicas para una cookie</h2>
 
   <div class="card-container">
     <a class="card" target="_blank" rel="noopener" (click)="allMight()">
-      <span>Agregar cookies</span>
+      <span>Agregar Cookie de Prueba</span>
     </a>
-
+    
     <a class="card" target="_blank" rel="noopener" (click)="allDeku()">
-      <span>Mostrar una cookie</span>
+      <span>Mostrar Usuario en Cookie</span>
     </a>
 
     <a class="card" target="_blank" rel="noopener" (click)="allForOne()">
-      <span>Borrar una cookie</span>
+      <span>Borrar Cookies</span>
+    </a>
+  </div>
+  <div *ngFor ="let com of lstcomments" class="card-container">
+    <h2>{{com.email}}</h2>
+    {{com.id}}.-  {{com.body}}
+    <a class="card" target="_blank" rel="noopener" (click)="MidoriyaShonen(com)">
+      <span>Agregar Usuario a Cookie</span>
     </a>
   </div>
 
